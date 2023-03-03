@@ -5,7 +5,7 @@ proc currentSourceDir(): string {.compileTime.} =
   result = currentSourcePath().replace("\\", "/")
   result = result[0 ..< result.rfind("/")]
 
-{.passC: "-I" & currentSourceDir() & "/imgui/private/cimnodes" & " -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1".}
+{.passC: "-I" & currentSourceDir() & "/private/cimnodes" & " -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1".}
 when defined(linux):
   {.passL: "-Xlinker -rpath .".}
 
