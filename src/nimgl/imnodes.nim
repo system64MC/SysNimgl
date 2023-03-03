@@ -19,8 +19,8 @@ when not defined(cpp) or defined(cimguiDLL):
   {.passC: "-DCIMGUI_DEFINE_ENUMS_AND_STRUCTS".}
   {.pragma: imnodes_header, header: "cimnodes.h".}
 else:
-  {.compile("private/cimnodes/cimnodes.cpp", "-I" & currentSourceDir() & "/private/cimnodes/imnodes/dependencies/imgui-1.84.2"),
-    compile("private/cimnodes/imnodes/imnodes.cpp", "-I" & currentSourceDir() & "/private/cimnodes/imnodes/dependencies/imgui-1.84.2").}
+  {.compile("private/cimnodes/cimnodes.cpp", "-DIMNODES_NAMESPACE=imnodes -I" & currentSourceDir() & "/private/cimnodes/imnodes/dependencies/imgui-1.84.2"),
+    compile("private/cimnodes/imnodes/imnodes.cpp", "-DIMNODES_NAMESPACE=imnodes -I" & currentSourceDir() & "/private/cimnodes/imnodes/dependencies/imgui-1.84.2").}
   {.pragma: imnodes_header, header: currentSourceDir() & "/private/ncimnodes.h".}
 
 type
