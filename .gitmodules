@@ -4,6 +4,6 @@
 [submodule "src/nimgl/private/glfw"]
 	path = src/nimgl/private/glfw
 	url = https://github.com/glfw/glfw.git
-[submodule "cimnodes"]
-	path = cimnodes
+[submodule "src/nimgl/private/cimnodes"]
+	path = src/nimgl/private/cimnodes
 	url = https://github.com/cimgui/cimnodes
